@@ -5,7 +5,7 @@ import HttpRoute from "../../classes/HttpRoute";
 import { Request, Response } from "express";
 
 export class ToggleCBSpy implements HttpRoute {
-  public httpMethod = "post";
+  public httpMethod = "put";
   public httpPath = "/toggle-cbspy";
 
   public async httpExecute(req: Request, res: Response) {

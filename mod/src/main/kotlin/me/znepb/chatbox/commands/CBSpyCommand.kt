@@ -34,7 +34,7 @@ object CBSpyCommand {
                         body["user"] = JsonPrimitive(it.source.player!!.uuidAsString)
 
                         val data =
-                            HttpRequests.makeServerPostRequest("/toggle-cbspy", JsonObject(body).toString())
+                            HttpRequests.makeServerPutRequest("/toggle-cbspy", JsonObject(body).toString())
 
                         if(data == null) {
                             it.source.sendMessage(
