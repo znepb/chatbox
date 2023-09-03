@@ -14,6 +14,15 @@ object ChatboxPermissions {
     const val ADMIN_WEBSOCKET = "${PREFIX}_admin_websocket"
     const val ADMIN_WEBSOCKET_STATUS = "${PREFIX}_admin_websocket_status"
     const val ADMIN_WEBSOCKET_RECONNECT = "${PREFIX}_admin_websocket_reconnect"
+    const val ADMIN_BAN = "${PREFIX}_admin_ban"
+    const val ADMIN_UNBAN = "${PREFIX}_admin_unban"
+    const val ADMIN_LICENSE = "${PREFIX}_license"
+    const val ADMIN_LICENSE_REVOKE = "${PREFIX}_license_revoke"
+    const val ADMIN_LICENSE_CAPABILITY = "${PREFIX}_license_capability"
+    const val ADMIN_LICENSE_CAPABILITY_LIST = "${PREFIX}_license_capability_list"
+    const val ADMIN_LICENSE_CAPABILITY_ADD = "${PREFIX}_license_capability_add"
+    const val ADMIN_LICENSE_CAPABILITY_REMOVE = "${PREFIX}_license_capability_remove"
+
 
     // Chatbox capabilities
     const val TELL = "tell"

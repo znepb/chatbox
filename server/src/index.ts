@@ -5,7 +5,7 @@ import { GetLicense } from "./routes/http/licenses/get";
 import { CreateLicense } from "./routes/http/licenses/create";
 import { DispatchCommand } from "./routes/ws/dispatch/command";
 import UserUUIDLicenseCache from "./classes/UserUUIDLicenseCache";
-import { StartWS } from "./routes/http/start-ws";
+import { StartWS } from "./routes/http/ws";
 import minecraftPlayer from "minecraft-player";
 import { ToggleCBSpy } from "./routes/http/toggle-cbspy";
 import WebsocketServer from "./WebsocketServer";
@@ -129,7 +129,6 @@ wsServer.addRoute(new DispatchJoin());
 wsServer.addRoute(new DispatchLeave());
 wsServer.addRoute(new DispatchMessage());
 
-// Check every minute
 setInterval(checkBans, config.banCheckInterval);
 
 export class Server {

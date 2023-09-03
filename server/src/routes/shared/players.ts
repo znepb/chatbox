@@ -12,9 +12,9 @@ import { WSData } from "../../types";
 import getOnlinePlayers from "../../utils/getOnlinePlayers";
 
 export class ListPlayers implements WebsocketRoute, HttpRoute {
-  public httpPath = "/list-players";
+  public httpPath = "/players";
   public httpMethod = "get";
-  public wsAction = "list-players";
+  public wsAction = "players";
 
   private async execute(user: string, capabilities: string[], data: Data) {
     return await getOnlinePlayers();

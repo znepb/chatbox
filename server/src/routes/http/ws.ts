@@ -6,7 +6,7 @@ import HttpRoute from "../../classes/HttpRoute";
 import { info } from "console";
 
 export class StartWS implements HttpRoute {
-  public httpPath = "/start-ws";
+  public httpPath = "/ws";
   public httpMethod = "get";
 
   public async httpExecute(req: Request, res: Response): Promise<Object> {

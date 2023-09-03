@@ -39,7 +39,7 @@ Example body / data:
 }
 ```
 
-### `GET /list-players`, `list-players`
+### `GET /players`, `players`
 Lists all players currently online on the server.
 Example response body / data:
 ```json
@@ -51,7 +51,7 @@ Example response body / data:
 ```
 
 ## HTTP-exclusive endpoints
-### GET `/start-ws`
+### GET `/ws`
 Requires a Bearer authorization header with your License ID. Returns a 
 JSON object with the websocket session ID and when that id expires, in
 milliseconds.
