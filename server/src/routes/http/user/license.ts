@@ -30,7 +30,6 @@ export class GetUsersLicense extends AuthenticatedRoute implements HttpRoute {
         return 404;
       }
     } else {
-      console.log("Username!");
       const user = await Server.prisma.user.findMany({
         where: {
           username: req.params.id,
@@ -40,8 +39,6 @@ export class GetUsersLicense extends AuthenticatedRoute implements HttpRoute {
       if (user.length == 0) return 404;
       // not standard, oh well
       if (user.length > 1) return 409;
-
-      console.log("OK");
 
       if (user[0].licenseId != null) {
         Server.uuidLicenseCache.setLicenseOwner(user[0].licenseId, user[0].id);

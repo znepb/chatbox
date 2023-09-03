@@ -41,7 +41,6 @@ object HttpRequests {
 
     fun makeServerPutRequest(endpoint: String, json: String): HttpResponse<String>? {
         return try {
-            logger.info(json)
             val request = HttpRequest.newBuilder()
                 .uri(URI.create("${Chatbox.config.getHttpEndpoint()}${endpoint}"))
                 .PUT(HttpRequest.BodyPublishers.ofString(json))
@@ -61,7 +60,6 @@ object HttpRequests {
 
     fun makeServerPostRequest(endpoint: String, json: String): HttpResponse<String>? {
         return try {
-            logger.info(json)
             val request = HttpRequest.newBuilder()
                 .uri(URI.create("${Chatbox.config.getHttpEndpoint()}${endpoint}"))
                 .POST(HttpRequest.BodyPublishers.ofString(json))

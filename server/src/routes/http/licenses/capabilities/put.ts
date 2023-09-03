@@ -37,8 +37,6 @@ export class PutLicenseCapability
 
     if (!license) return 404;
 
-    console.log(req.body);
-
     const capabilities = JSON.parse(license.capabilities);
 
     for (let i = 0; i < req.body.capabilities.length; i++) {
@@ -51,7 +49,6 @@ export class PutLicenseCapability
     }
 
     capabilities.push(...req.body.capabilities);
-    console.log(capabilities);
 
     await prisma.license.update({
       where: {

@@ -37,7 +37,6 @@ class ChatboxConfig {
 
     init {
         val path = Path("${FabricLoader.getInstance().configDir}/chatbox.json")
-        Chatbox.logger.info(path.toString());
         val content = if(path.exists()) path.readText() else defaultConfig
         val json = Json.parseToJsonElement(content)
 

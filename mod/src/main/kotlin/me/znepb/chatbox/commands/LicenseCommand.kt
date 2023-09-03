@@ -135,8 +135,6 @@ object LicenseCommand {
 
                 val response = HttpRequests.makeServerPostRequest("/licenses", json.toString())
 
-                logger.info(response?.statusCode().toString())
-
                 if(response == null) {
                     ctx.source.sendMessage(
                         Text.literal("Failed to contact server. Please try again later. If the problem persists, contact an admin.")

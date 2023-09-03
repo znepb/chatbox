@@ -37,12 +37,16 @@ class Websocket : WebSocket.Listener {
     }
 
     fun sendWebsocketRequest(action: String, data: JsonObject) {
-        val map = mutableMapOf<String, JsonElement>()
-        map["action"] = JsonPrimitive(action)
-        map["type"] = JsonPrimitive("REQ")
-        map["data"] = data
+        try {
+            val map = mutableMapOf<String, JsonElement>()
+            map["action"] = JsonPrimitive(action)
+            map["type"] = JsonPrimitive("REQ")
+            map["data"] = data
 
-        this.websocket?.get()?.sendText(JsonObject(map).toString(), true)
+            this.websocket?.get()?.sendText(JsonObject(map).toString(), true)
+        } catch(e: Exception) {
+            logger.warn("Failed to send WS request: $e")
+        }
     }
 
     fun respond(json: JsonElement, data: JsonElement) {
