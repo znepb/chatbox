@@ -1,0 +1,36 @@
+{
+	"schemaVersion": 1,
+	"id": "chatbox",
+	"version": "${version}",
+	"name": "chatbox",
+	"description": "",
+	"authors": [
+		"znepb"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/chatbox/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"server": [
+			{
+				"value": "me.znepb.chatbox.Chatbox",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+		"chatbox.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.22",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*",
+		"fabric-language-kotlin": ">=1.9.10",
+		"fabric-permissions-api-v0": "*"
+	}
+}
