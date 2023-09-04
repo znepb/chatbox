@@ -1,5 +1,5 @@
 # chatbox
-This is a mod that imitates (SwitchCraft's chatbox functionality)[https://sc3.io/]. It 
+This is a mod that imitates [SwitchCraft's chatbox functionality](https://sc3.io/). It 
 consists of two parts currently: the server-side mod, and the NodeJS server. The NodeJS
 server stores all the data and does all the HTTP and websocket interaction. The mod sends
 messages to the NodeJS server and does commands.
